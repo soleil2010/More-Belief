@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# ModBuddy Solution File, Format Version 11.00
+Project("{F5FC21B5-7CC2-458A-ABBA-992F515BBA20}") = "More Belief (Religion for 10 players)", "More Belief (Religion for 10 players)\More Belief (Religion for 10 players).civ5proj", "{9821CB54-09B2-4E26-80DA-899F747EC8BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|x86 = Default|x86
+		Deploy Only|x86 = Deploy Only|x86
+		Package Only|x86 = Package Only|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9821CB54-09B2-4E26-80DA-899F747EC8BD}.Default|x86.ActiveCfg = Default|x86
+		{9821CB54-09B2-4E26-80DA-899F747EC8BD}.Default|x86.Build.0 = Default|x86
+		{9821CB54-09B2-4E26-80DA-899F747EC8BD}.Deploy Only|x86.ActiveCfg = Deploy Only|x86
+		{9821CB54-09B2-4E26-80DA-899F747EC8BD}.Deploy Only|x86.Build.0 = Deploy Only|x86
+		{9821CB54-09B2-4E26-80DA-899F747EC8BD}.Package Only|x86.ActiveCfg = Package Only|x86
+		{9821CB54-09B2-4E26-80DA-899F747EC8BD}.Package Only|x86.Build.0 = Package Only|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
