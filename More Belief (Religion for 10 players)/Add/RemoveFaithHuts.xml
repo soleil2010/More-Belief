@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<HandicapInfo_Goodies>
+		<Delete GoodyType="GOODY_PANTHEON_FAITH"/>
+		<Delete GoodyType="GOODY_PROPHET_FAITH"/>
+	</HandicapInfo_Goodies>
+</GameData>

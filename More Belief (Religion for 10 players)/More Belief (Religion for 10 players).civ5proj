@@ -35,9 +35,15 @@
   <ItemGroup>
     <Folder Include="ART" />
     <Folder Include="ART\Lupanar" />
+    <Folder Include="Add" />
+    <Folder Include="LUA" />
     <Folder Include="SQL" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Add\RemoveFaithHuts.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
     <Content Include="ART\Lupanar\3UCplayhouse128.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
@@ -53,6 +59,34 @@
     <Content Include="ART\Lupanar\3UCplayhouse64.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="ART\Lupanar\JFD_PietyBeliefAtlas_128.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="ART\Lupanar\JFD_PietyBeliefAtlas_256.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="ART\Lupanar\JFD_PietyBeliefAtlas_45.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="ART\Lupanar\JFD_PietyBeliefAtlas_64.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="ART\Lupanar\JFD_PietyBeliefAtlas_80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="LUA\Functions.lua">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="SQL\Dummies.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
     <Content Include="SQL\Follower.sql">
       <SubType>Lua</SubType>
