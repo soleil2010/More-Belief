@@ -5,7 +5,7 @@
 --===========================================================================================================
 INSERT INTO Buildings
 			(Type,				BuildingClass,			  Description, Civilopedia,			Strategy,	Help,																																																																															ConquestProb,	ReligiousPressureModifier,	ConversionModifier, Cost,	UnlockedByBelief,	FaithCost,	 UnculturedHappinessChange,		DefenseHappinessChange, Happiness,  ArtDefineTag,	MinAreaSize,	IconAtlas,			PortraitIndex)
-	VALUES	('BUILDING_LUPANAR', 'BUILDINGCLASS_LUPANAR',  'Lupanar', 'Civilopedia_Lupanar','Lup_Strat','Reduces slightly Distress and Boredom. Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, and increases the city''s resistance to conversion by 10%.[NEWLINE] Gain [ICON_FOOD] and [ICON_PEACE] every time a citizen is born in the city. 10% [ICON_FOOD] in the city during Golden Age.', 100,			25,							-10,				-1,		1,					 200,		-5,								-5,						1,			'TEMPLE',		-1,				'DF_BELIEF_ATLAS',	0)
+	VALUES	('BUILDING_LUPANAR', 'BUILDINGCLASS_LUPANAR',  'Lupanar', 'Civilopedia_Lupanar','Lup_Strat','Reduces slightly Distress and Boredom. Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, and increases the city''s resistance to conversion by 10%.[NEWLINE] Gain [ICON_FOOD] and [ICON_PEACE] every time a citizen is born in the city. 10% [ICON_FOOD] in the city during Golden Age.', 0,			25,							-10,				-1,		1,					 200,		-5,								-5,						1,			'TEMPLE',		-1,				'DF_BELIEF_ATLAS',	0)
 
 	
 INSERT INTO BuildingClasses 
@@ -38,8 +38,8 @@ INSERT INTO Building_GoldenAgeYieldMod
 -- Jinja
 --===========================================================================================================
 INSERT INTO Buildings
-			(Type,				BuildingClass,			Description, Civilopedia,			Strategy,		Help,		ConquestProb,	ReligiousPressureModifier,	ConversionModifier, Cost,	UnlockedByBelief,	FaithCost,	 UnculturedHappinessChange,		DefenseHappinessChange, Happiness,  ArtDefineTag,	MinAreaSize,						IconAtlas,			PortraitIndex)
-	VALUES	('BUILDING_JINJA', 'BUILDINGCLASS_JINJA',  'Jinja',		'Civilopedia_Jinja',	'Jinja_Strat',	'help'	,	100,			25,							-10,				-1,		1,					 200,		0,								-10,						0,			'TEMPLE',		-1,				'JFD_PIETY_BELIEF_ATLAS',	3)
+			(Type,				BuildingClass,			Description, Civilopedia,			Strategy,		Help,																																																																			ConquestProb,	ReligiousPressureModifier,	ConversionModifier, Cost,	UnlockedByBelief,	FaithCost,	 UnculturedHappinessChange,		DefenseHappinessChange, Happiness,  ArtDefineTag,	MinAreaSize,						IconAtlas,			PortraitIndex)
+	VALUES	('BUILDING_JINJA', 'BUILDINGCLASS_JINJA',  'Jinja',		'Civilopedia_Jinja',	'Jinja_Strat',	'Reduces Distress. Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, and increases the city''s resistance to conversion by 10%.[NEWLINE]Forts and Citadels near the city gain +2 [ICON_FOOD] Food and +1 [ICON_PRODUCTION] Production.'	,	0,			25,							-10,				-1,		1,					 200,		0,								-10,						0,			'TEMPLE',		-1,				'JFD_PIETY_BELIEF_ATLAS',	3)
 
 	
 INSERT INTO BuildingClasses 
@@ -70,6 +70,45 @@ INSERT INTO Building_ImprovementYieldChanges
 -- War cult
 --===========================================================================================================
 INSERT INTO Beliefs
+			(Type,				Description,									ShortDescription,	Follower, UnitProductionModifier,				Tooltip)
+	VALUES	('BELIEF_WAR_CULT',  'Use [ICON_PEACE] Faith to purchase War Cult',	'War Cult',					1,					10,		'+3 [ICON_PEACE] Faith[NEWLINE]+2 [ICON_PRODUCTION] Production[NEWLINE]Gain [ICON_CULTURE] Culture and [ICON_PEACE] Faith when training military units.[NEWLINE]-10% unit production cost')
+
+INSERT INTO Buildings
+			(Type,				BuildingClass,					Description,			 Civilopedia,			Strategy,		Help,																																																																							ConquestProb,	ReligiousPressureModifier,	ConversionModifier, Cost,	UnlockedByBelief,	FaithCost,	 UnculturedHappinessChange,		DefenseHappinessChange, Happiness,  ArtDefineTag,	MinAreaSize,						IconAtlas,			PortraitIndex)
+	VALUES	('BUILDING_WAR_CULT', 'BUILDINGCLASS_WAR_CULT',  'War Cult',		'Civilopedia_WAR_CULT',	'WAR_CULT_Strat',	'Reduces Distress. Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, and increases the city''s resistance to conversion by 10%.[NEWLINE]Gain [ICON_CULTURE] Culture and [ICON_PEACE] Faith when training military units[NEWLINE]-10% units cost production'	,	0,			25,							-10,				-1,		1,					 200,		0,								-10,						0,			'TEMPLE',		-1,				'JFD_PIETY_BELIEF_ATLAS',	8)
+
+	
+INSERT INTO BuildingClasses 
+			(Type,					DefaultBuilding,	Description)
+	VALUES	('BUILDINGCLASS_WAR_CULT',	'BUILDING_WAR_CULT',	'War Cult')
+
+INSERT INTO Belief_BuildingClassFaithPurchase 
+			(BeliefType,	 BuildingClassType)
+	VALUES  ('BELIEF_WAR_CULT', 'BUILDINGCLASS_WAR_CULT')
+
+INSERT INTO Building_YieldChanges
+			(BuildingType,		YieldType,		Yield)
+	VALUES	('BUILDING_WAR_CULT',	'YIELD_FAITH',	3),
+			('BUILDING_WAR_CULT',	'YIELD_PRODUCTION',	2);
+
+INSERT INTO Building_YieldFromUnitProduction
+			(BuildingType,		YieldType,		Yield)
+VALUES		('BUILDING_WAR_CULT','YIELD_FAITH', 5),
+			('BUILDING_WAR_CULT','YIELD_CULTURE', 5);  
+
+--===========================================================================================================
+-- God of Luxury
+--===========================================================================================================
+
+INSERT INTO Beliefs
 			(Type,				Description,																															ShortDescription,	Follower, UnitProductionModifier,				Tooltip)
-	VALUES	('BELIEF_WAR_CULT',  'Gain [ICON_CULTURE] Culture and [ICON_PEACE] Faith when training military units, -10% units cost production',	'War cult',					1,					10,		'Gain [ICON_CULTURE] Culture and [ICON_PEACE] Faith when training military units.[NEWLINE]-10% unit production cost')
+	VALUES	('BELIEF_GODOPULENCE',  '+2 [ICON_PEACE] Faith, +2 [ICON_GOLD] Gold, +2 [ICON_CULTURE] Culture, +2 [ICON_RESEARCH] Science per luxury ressources owned',	'God of opulence',					1,					10,		'+2 [ICON_PEACE] Faith[NEWLINE]+2 [ICON_GOLD] Gold[NEWLINE]+2 [ICON_CULTURE] Culture[NEWLINE]+2 [ICON_RESEARCH] Science[NEWLINE]for each unique luxury ressource owned(Imported and Exported)')
+
+INSERT INTO Belief_YieldPerLux
+			(BeliefType,			YieldType, Yield)
+VALUES		('BELIEF_GODOPULENCE', 'YIELD_FAITH', 2),
+			('BELIEF_GODOPULENCE', 'YIELD_GOLD', 2),
+			('BELIEF_GODOPULENCE', 'YIELD_CULTURE', 2),
+			('BELIEF_GODOPULENCE', 'YIELD_SCIENCE', 2);
+
 
