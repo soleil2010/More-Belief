@@ -5,35 +5,36 @@
 --===========================================================================================================
 INSERT INTO Buildings
 			(Type,				BuildingClass,			  Description, Civilopedia,			Strategy,	Help,																																																																															ConquestProb,	ReligiousPressureModifier,	ConversionModifier, Cost,	UnlockedByBelief,	FaithCost,	 UnculturedHappinessChange,		DefenseHappinessChange, Happiness,  ArtDefineTag,	MinAreaSize,	IconAtlas,			PortraitIndex)
-	VALUES	('BUILDING_LUPANAR', 'BUILDINGCLASS_LUPANAR',  'Lupanar', 'Civilopedia_Lupanar','Lup_Strat','Reduces slightly Distress and Boredom. Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, and increases the city''s resistance to conversion by 10%.[NEWLINE] Gain [ICON_FOOD] and [ICON_PEACE] every time a citizen is born in the city. 10% [ICON_FOOD] in the city during Golden Age.', 0,			25,							-10,				-1,		1,					 200,		-5,								-5,						1,			'TEMPLE',		-1,				'DF_BELIEF_ATLAS',	0)
-
+	SELECT	'BUILDING_LUPANAR', 'BUILDINGCLASS_LUPANAR',  'Lupanar', 'Civilopedia_Lupanar','Lup_Strat','Reduces slightly Distress and Boredom. Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, and increases the city''s resistance to conversion by 10%.[NEWLINE] Gain [ICON_FOOD] and [ICON_PEACE] every time a citizen is born in the city. 10% [ICON_FOOD] in the city during Golden Age.', 0,					25,							-10,				-1,		1,					 200,		-5,								-5,						1,			'TEMPLE',		-1,				'DF_BELIEF_ATLAS',	0
+	WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CBPMC_MORERELIGION' AND Value= 1);
 	
 INSERT INTO BuildingClasses 
 			(Type,						DefaultBuilding,  Description)
-	VALUES	('BUILDINGCLASS_LUPANAR',	'BUILDING_LUPANAR',	 'Lupanar')
-	
+	SELECT	'BUILDINGCLASS_LUPANAR',	'BUILDING_LUPANAR',	 'Lupanar'
+	WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CBPMC_MORERELIGION' AND Value= 1);
 INSERT INTO Beliefs
 			(Type,				Description,									ShortDescription,	Follower,	Tooltip)
-	VALUES	('BELIEF_LUPANAR',  'Use [ICON_PEACE] Faith to purchase Lupanar',	'Lupanar',			1,			'+2 [ICON_PEACE] Faith[NEWLINE]+1 [ICON_FOOD] Food [NEWLINE]+1 [ICON_CULTURE] Culture[NEWLINE]+1 [ICON_HAPPINESS_1] Happiness[NEWLINE][NEWLINE]Reduces slightly Distress and Boredom. Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, and increases the city''s resistance to conversion by 10%.[NEWLINE] Gain [ICON_FOOD] and [ICON_PEACE] every time a citizen is born in the city. 10% [ICON_FOOD] in the city during Golden Age.')
-
+	SELECT	'BELIEF_LUPANAR',  'Use [ICON_PEACE] Faith to purchase Lupanar',	'Lupanar',			1,			'+2 [ICON_PEACE] Faith[NEWLINE]+1 [ICON_FOOD] Food [NEWLINE]+1 [ICON_CULTURE] Culture[NEWLINE]+1 [ICON_HAPPINESS_1] Happiness[NEWLINE][NEWLINE]Reduces slightly Distress and Boredom. Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, and increases the city''s resistance to conversion by 10%.[NEWLINE] Gain [ICON_FOOD] and [ICON_PEACE] every time a citizen is born in the city. 10% [ICON_FOOD] in the city during Golden Age.'
+	WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CBPMC_MORERELIGION' AND Value= 1);
 INSERT INTO Belief_BuildingClassFaithPurchase 
 			(BeliefType,			 BuildingClassType)
-	VALUES  ('BELIEF_LUPANAR', 'BUILDINGCLASS_LUPANAR')
-
+	SELECT  'BELIEF_LUPANAR', 'BUILDINGCLASS_LUPANAR'
+	WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CBPMC_MORERELIGION' AND Value= 1);
 INSERT INTO Building_YieldChanges
 			(BuildingType,			YieldType,		Yield)
-	VALUES	('BUILDING_LUPANAR',	'YIELD_FAITH',	2),
-			('BUILDING_LUPANAR',	'YIELD_FOOD',	1),		
-			('BUILDING_LUPANAR',	'YIELD_CULTURE',1);
+	SELECT	'BUILDING_LUPANAR',	'YIELD_FAITH',	2 WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CBPMC_MORERELIGION' AND Value= 1) UNION ALL
+			'BUILDING_LUPANAR',	'YIELD_FOOD',	1 WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CBPMC_MORERELIGION' AND Value= 1) UNION ALL		
+			'BUILDING_LUPANAR',	'YIELD_CULTURE',1 WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CBPMC_MORERELIGION' AND Value= 1);
 
 INSERT INTO Building_YieldFromBirth
 			(BuildingType,			YieldType,		Yield)
-	VALUES	('BUILDING_LUPANAR',	'YIELD_FAITH',	10),
-			('BUILDING_LUPANAR',	'YIELD_FOOD',	10);
+	SELECT	'BUILDING_LUPANAR',	'YIELD_FAITH',	10 WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CBPMC_MORERELIGION' AND Value= 1) UNION ALL
+			'BUILDING_LUPANAR',	'YIELD_FOOD',	10 WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CBPMC_MORERELIGION' AND Value= 1);
 
 INSERT INTO Building_GoldenAgeYieldMod
 			(BuildingType,			YieldType,		Yield)
-	VALUES	('BUILDING_LUPANAR',	'YIELD_FOOD',	10)
+	SELECT	'BUILDING_LUPANAR',	'YIELD_FOOD',	10 WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CBPMC_MORERELIGION' AND Value= 1);
+
 --===========================================================================================================
 -- Jinja
 --===========================================================================================================
@@ -61,10 +62,10 @@ INSERT INTO Building_YieldChanges
 
 INSERT INTO Building_ImprovementYieldChanges
 			(BuildingType,		ImprovementType,	 YieldType,		Yield)
-	VALUES	('BUILDING_JINJA',	IMPROVEMENT_FORT,	 'YIELD_FOOD',	2),
-			('BUILDING_JINJA',	IMPROVEMENT_CITADEL, 'YIELD_FOOD',	2),
-			('BUILDING_JINJA',	IMPROVEMENT_FORT,	 'YIELD_PRODUCTION',	1),
-			('BUILDING_JINJA',	IMPROVEMENT_CITADEL, 'YIELD_PRODUCTION',	1);
+	VALUES	('BUILDING_JINJA',	'IMPROVEMENT_FORT',	 'YIELD_FOOD',	2),
+			('BUILDING_JINJA',	'IMPROVEMENT_CITADEL', 'YIELD_FOOD',	2),
+			('BUILDING_JINJA',	'IMPROVEMENT_FORT',	 'YIELD_PRODUCTION',	1),
+			('BUILDING_JINJA',	'IMPROVEMENT_CITADEL', 'YIELD_PRODUCTION',	1);
 
 --===========================================================================================================
 -- War cult
