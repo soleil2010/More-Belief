@@ -100,16 +100,18 @@ VALUES		('BUILDING_WAR_CULT','YIELD_FAITH', 5),
 --===========================================================================================================
 -- God of Luxury
 --===========================================================================================================
-
+/*
 INSERT INTO Beliefs
-			(Type,				Description,																															ShortDescription,	Follower, UnitProductionModifier,				Tooltip)
-	VALUES	'BELIEF_GODOPULENCE',  '+2 [ICON_PEACE] Faith, +2 [ICON_GOLD] Gold, +2 [ICON_CULTURE] Culture, +2 [ICON_RESEARCH] Science per luxury ressources owned',	'God of opulence',					1,					10,		'+2 [ICON_PEACE] Faith[NEWLINE]+2 [ICON_GOLD] Gold[NEWLINE]+2 [ICON_CULTURE] Culture[NEWLINE]+2 [ICON_RESEARCH] Science[NEWLINE]for each unique luxury ressource owned(Imported and Exported)'WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='DF_MOREBELIEF' AND Value= 1);
-
+			(Type,				Description,																															ShortDescription,		Follower, 	Tooltip)
+	SELECT	'BELIEF_GODOPULENCE',  '+2 [ICON_PEACE] Faith, +2 [ICON_GOLD] Gold, +2 [ICON_CULTURE] Culture, +2 [ICON_RESEARCH] Science per luxury ressources owned',	'God of Opulence',					1,	'+2 [ICON_PEACE] Faith[NEWLINE]+2 [ICON_GOLD] Gold[NEWLINE]+2 [ICON_CULTURE] Culture[NEWLINE]+2 [ICON_RESEARCH] Science[NEWLINE]for each unique luxury ressource owned(Imported and Exported)'
+	WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CBPMC_MORERELIGION' AND Value= 1);
+*/
 INSERT INTO Belief_YieldPerLux
 			(BeliefType,			YieldType, Yield)
-VALUES		'BELIEF_GODOPULENCE', 'YIELD_FAITH', 2 WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='DF_MOREBELIEF' AND Value= 1) UNION ALL
-			'BELIEF_GODOPULENCE', 'YIELD_GOLD', 2 WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='DF_MOREBELIEF' AND Value= 1) UNION ALL
-			'BELIEF_GODOPULENCE', 'YIELD_CULTURE', 2 WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='DF_MOREBELIEF' AND Value= 1) UNION ALL
-			'BELIEF_GODOPULENCE', 'YIELD_SCIENCE', 2 WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='DF_MOREBELIEF' AND Value= 1);
+SELECT		('BELIEF_GODOPULENCE', 'YIELD_FAITH', 2), --WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CBPMC_MORERELIGION' AND Value= 1) UNION ALL
+			('BELIEF_GODOPULENCE', 'YIELD_GOLD', 2), --WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CBPMC_MORERELIGION' AND Value= 1) UNION ALL
+			('BELIEF_GODOPULENCE', 'YIELD_CULTURE', 2), --WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CBPMC_MORERELIGION' AND Value= 1) UNION ALL
+			('BELIEF_GODOPULENCE', 'YIELD_SCIENCE', 2); --WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='CBPMC_MORERELIGION' AND Value= 1);
 
-
+INSERT INTO Beliefs ("Type",        "Description", "ShortDescription", "Pantheon", "Founder", "Follower",    "Tooltip")
+             VALUES ('BELIEF_BANANA', '"IM BANANA"',        '"BANANA"',            '0',        '1',        '0',        '"BANANA desc"');
