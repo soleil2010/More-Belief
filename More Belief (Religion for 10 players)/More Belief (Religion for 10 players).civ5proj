@@ -56,6 +56,31 @@
         <Type>UpdateDatabase</Type>
         <FileName>SQL/Reformation.sql</FileName>
       </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>Add/Historical religion from subtract/XML/Historical Religions Mod Edits.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>Add/Historical religion from subtract/XML/HistoricalReligionsMasterText.xml</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>Add/Historical religion from subtract/SQL/HistoricalReligionsMasterArt.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>Add/Historical religion from subtract/SQL/HistoricalReligionsMasterPreference.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
+        <FileName>Add/Historical religion from subtract/SQL/HistoricalReligionsMasterReligion.sql</FileName>
+      </Action>
     </ModActions>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
@@ -70,7 +95,12 @@
     <DeployMod>true</DeployMod>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="Add\Historical religion from subtract\Art" />
+    <Folder Include="Add\Historical religion from subtract\Art\Temp\" />
+    <Folder Include="Add\Historical religion from subtract\XML" />
+    <Folder Include="Add\Historical religion from subtract\SQL" />
     <Folder Include="Add\More religion Icons" />
+    <Folder Include="Add\Historical religion from subtract" />
     <Folder Include="ART" />
     <Folder Include="ART\ICON" />
     <Folder Include="Add" />
@@ -78,6 +108,114 @@
     <Folder Include="SQL" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Add\Historical religion from subtract\Art\HistoricalReligionsMaster128.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\Art\HistoricalReligionsMaster16.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\Art\HistoricalReligionsMaster214.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\Art\HistoricalReligionsMaster24.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\Art\HistoricalReligionsMaster256.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\Art\HistoricalReligionsMaster32.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\Art\HistoricalReligionsMaster48.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\Art\HistoricalReligionsMaster64.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\Art\HistoricalReligionsMaster80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\Art\HistoricalReligionsMasterFontIcons.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\Art\HistoricalReligionsMasterFontIcons.ggxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\Art\Temp\HRCTemp128.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\Art\Temp\HRCTemp16.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\Art\Temp\HRCTemp214.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\Art\Temp\HRCTemp24.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\Art\Temp\HRCTemp256.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\Art\Temp\HRCTemp32.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\Art\Temp\HRCTemp48.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\Art\Temp\HRCTemp64.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\Art\Temp\HRCTemp80.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\Art\Temp\HRCTempFontIcons.dds">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\Art\Temp\HRCTempFontIcons.ggxml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>True</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\SQL\HistoricalReligionsMasterArt.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\SQL\HistoricalReligionsMasterPreference.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\SQL\HistoricalReligionsMasterReligion.sql">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\XML\Historical Religions Mod Edits.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
+    <Content Include="Add\Historical religion from subtract\XML\HistoricalReligionsMasterText.xml">
+      <SubType>Lua</SubType>
+      <ImportIntoVFS>False</ImportIntoVFS>
+    </Content>
     <Content Include="Add\More religion Icons\strange-fonticons.dds">
       <SubType>Lua</SubType>
       <ImportIntoVFS>True</ImportIntoVFS>
