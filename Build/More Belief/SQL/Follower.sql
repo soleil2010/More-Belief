@@ -62,10 +62,10 @@ INSERT INTO Building_YieldChanges
 
 INSERT INTO Building_ImprovementYieldChanges
 			(BuildingType,		ImprovementType,	 YieldType,		Yield)
-	VALUES	('BUILDING_JINJA',	IMPROVEMENT_FORT,	 'YIELD_FOOD',	2),
-			('BUILDING_JINJA',	IMPROVEMENT_CITADEL, 'YIELD_FOOD',	2),
-			('BUILDING_JINJA',	IMPROVEMENT_FORT,	 'YIELD_PRODUCTION',	1),
-			('BUILDING_JINJA',	IMPROVEMENT_CITADEL, 'YIELD_PRODUCTION',	1);
+	VALUES	('BUILDING_JINJA',	'IMPROVEMENT_FORT',	 'YIELD_FOOD',	2),
+			('BUILDING_JINJA',	'IMPROVEMENT_CITADEL', 'YIELD_FOOD',	2),
+			('BUILDING_JINJA',	'IMPROVEMENT_FORT',	 'YIELD_PRODUCTION',	1),
+			('BUILDING_JINJA',	'IMPROVEMENT_CITADEL', 'YIELD_PRODUCTION',	1);
 
 --===========================================================================================================
 -- War cult
@@ -103,13 +103,13 @@ VALUES		('BUILDING_WAR_CULT','YIELD_FAITH', 5),
 
 INSERT INTO Beliefs
 			(Type,				Description,																															ShortDescription,	Follower, UnitProductionModifier,				Tooltip)
-	VALUES	('BELIEF_GODOPULENCE',  '+2 [ICON_PEACE] Faith, +2 [ICON_GOLD] Gold, +2 [ICON_CULTURE] Culture, +2 [ICON_RESEARCH] Science per luxury ressources owned',	'God of opulence',					1,					10,		'+2 [ICON_PEACE] Faith[NEWLINE]+2 [ICON_GOLD] Gold[NEWLINE]+2 [ICON_CULTURE] Culture[NEWLINE]+2 [ICON_RESEARCH] Science[NEWLINE]for each unique luxury ressource owned(Imported and Exported)')
+	VALUES	'BELIEF_GODOPULENCE',  '+2 [ICON_PEACE] Faith, +2 [ICON_GOLD] Gold, +2 [ICON_CULTURE] Culture, +2 [ICON_RESEARCH] Science per luxury ressources owned',	'God of opulence',					1,					10,		'+2 [ICON_PEACE] Faith[NEWLINE]+2 [ICON_GOLD] Gold[NEWLINE]+2 [ICON_CULTURE] Culture[NEWLINE]+2 [ICON_RESEARCH] Science[NEWLINE]for each unique luxury ressource owned(Imported and Exported)'WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='DF_MOREBELIEF' AND Value= 1);
 
 INSERT INTO Belief_YieldPerLux
 			(BeliefType,			YieldType, Yield)
-VALUES		('BELIEF_GODOPULENCE', 'YIELD_FAITH', 2),
-			('BELIEF_GODOPULENCE', 'YIELD_GOLD', 2),
-			('BELIEF_GODOPULENCE', 'YIELD_CULTURE', 2),
-			('BELIEF_GODOPULENCE', 'YIELD_SCIENCE', 2);
+VALUES		'BELIEF_GODOPULENCE', 'YIELD_FAITH', 2 WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='DF_MOREBELIEF' AND Value= 1) UNION ALL
+			'BELIEF_GODOPULENCE', 'YIELD_GOLD', 2 WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='DF_MOREBELIEF' AND Value= 1) UNION ALL
+			'BELIEF_GODOPULENCE', 'YIELD_CULTURE', 2 WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='DF_MOREBELIEF' AND Value= 1) UNION ALL
+			'BELIEF_GODOPULENCE', 'YIELD_SCIENCE', 2 WHERE EXISTS (SELECT * FROM COMMUNITY WHERE Type='DF_MOREBELIEF' AND Value= 1);
 
 
