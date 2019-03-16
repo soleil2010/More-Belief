@@ -45,9 +45,9 @@
     <File md5="1F345D84CCE8FC4EC638EC1ED014216C" import="1">Add/Historical religion from subtract/Art/Temp/HRCTemp80.dds</File>
     <File md5="230EA59A4F8755B2BD70E78309880D41" import="1">Add/Historical religion from subtract/Art/Temp/HRCTempFontIcons.dds</File>
     <File md5="3AC9C5FABA2C0F03A12ED66995162CDA" import="1">Add/Historical religion from subtract/Art/Temp/HRCTempFontIcons.ggxml</File>
-    <File md5="691B75CD3D589F67D316D289AE74CC5A" import="0">Add/Historical religion from subtract/SQL/HistoricalReligionsMasterArt.sql</File>
-    <File md5="BF7C80CEE58B1E062403E69DE2F9800D" import="0">Add/Historical religion from subtract/SQL/HistoricalReligionsMasterPreference.sql</File>
-    <File md5="31810D8423BE0858422D242AEF5E7DEF" import="0">Add/Historical religion from subtract/SQL/HistoricalReligionsMasterReligion.sql</File>
+    <File md5="691B75CD3D589F67D316D289AE74CC5A" import="1">Add/Historical religion from subtract/SQL/HistoricalReligionsMasterArt.sql</File>
+    <File md5="BF7C80CEE58B1E062403E69DE2F9800D" import="1">Add/Historical religion from subtract/SQL/HistoricalReligionsMasterPreference.sql</File>
+    <File md5="31810D8423BE0858422D242AEF5E7DEF" import="1">Add/Historical religion from subtract/SQL/HistoricalReligionsMasterReligion.sql</File>
     <File md5="E60F7D415735DE86F4699D3091F65A34" import="0">Add/Historical religion from subtract/XML/HistoricalReligionsMasterText.xml</File>
     <File md5="7E4D0534A1A6D033DE045110724C6C02" import="0">Add/RemoveFaithHuts.xml</File>
     <File md5="9E50E67B467DB12EE2DFFC8036DCD77A" import="1">ART/ICON/3UCplayhouse128.dds</File>
@@ -61,19 +61,19 @@
     <File md5="4AC7600EDD0FDC95015AA46E24DDE823" import="1">ART/ICON/JFD_PietyBeliefAtlas_80.dds</File>
     <File md5="0BD4ADDB61323B57E07191DF3EDEE4DE" import="0">LUA/Functions.lua</File>
     <File md5="F1A56CFFC9E981611D193CC4982504CF" import="0">SQL/Dummies.sql</File>
-    <File md5="E3EBFD9F913F162270DFD129310B2720" import="0">SQL/Follower.sql</File>
-    <File md5="C0F5D0AEB298B01536B9E061B20FE0A6" import="0">SQL/ArtDefines.sql</File>
-    <File md5="D1001242CD51C169F16A1CCDEA20D243" import="0">SQL/Founder.sql</File>
-    <File md5="BCCFF059A137327521915ADC88C25F4E" import="0">SQL/Enhancer.sql</File>
+    <File md5="E8B945BB713FDF5B4647BEC4E492C9B7" import="0">SQL/Follower.sql</File>
+    <File md5="58A923235510066353EF29AD4AFD3E81" import="0">SQL/ArtDefines.sql</File>
+    <File md5="7947A810711FAB08F8ED38E2CB4F6DA7" import="0">SQL/Founder.sql</File>
+    <File md5="469C8AC4BC5969410DB981427181201B" import="0">SQL/Enhancer.sql</File>
     <File md5="46B56CF489093E13E830B356AF28E2A9" import="0">SQL/MODSupport.sql</File>
-    <File md5="63CDC16881484E12F81E288B668393D2" import="0">SQL/Reformation.sql</File>
+    <File md5="B2803898D09D27279489B01A1C17025E" import="0">SQL/Reformation.sql</File>
   </Files>
   <Actions>
     <OnModActivated>
       <UpdateDatabase>SQL/MODSupport.sql</UpdateDatabase>
+      <UpdateDatabase>SQL/Enhancer.sql</UpdateDatabase>
       <UpdateDatabase>Add/RemoveFaithHuts.xml</UpdateDatabase>
       <UpdateDatabase>SQL/ArtDefines.sql</UpdateDatabase>
-      <UpdateDatabase>SQL/Enhancer.sql</UpdateDatabase>
       <UpdateDatabase>SQL/Follower.sql</UpdateDatabase>
       <UpdateDatabase>SQL/Founder.sql</UpdateDatabase>
       <UpdateDatabase>SQL/Reformation.sql</UpdateDatabase>

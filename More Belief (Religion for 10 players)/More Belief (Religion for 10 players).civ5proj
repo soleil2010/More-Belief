@@ -29,17 +29,17 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
+        <FileName>SQL/Enhancer.sql</FileName>
+      </Action>
+      <Action>
+        <Set>OnModActivated</Set>
+        <Type>UpdateDatabase</Type>
         <FileName>Add/RemoveFaithHuts.xml</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
         <FileName>SQL/ArtDefines.sql</FileName>
-      </Action>
-      <Action>
-        <Set>OnModActivated</Set>
-        <Type>UpdateDatabase</Type>
-        <FileName>SQL/Enhancer.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -193,15 +193,15 @@
     </Content>
     <Content Include="Add\Historical religion from subtract\SQL\HistoricalReligionsMasterArt.sql">
       <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
+      <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="Add\Historical religion from subtract\SQL\HistoricalReligionsMasterPreference.sql">
       <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
+      <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="Add\Historical religion from subtract\SQL\HistoricalReligionsMasterReligion.sql">
       <SubType>Lua</SubType>
-      <ImportIntoVFS>False</ImportIntoVFS>
+      <ImportIntoVFS>True</ImportIntoVFS>
     </Content>
     <Content Include="Add\Historical religion from subtract\XML\HistoricalReligionsMasterText.xml">
       <SubType>Lua</SubType>
