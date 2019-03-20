@@ -63,7 +63,7 @@
     <File md5="F1A56CFFC9E981611D193CC4982504CF" import="0">SQL/Dummies.sql</File>
     <File md5="355AB28245D0740938CE22CE555B6C99" import="0">SQL/Follower.sql</File>
     <File md5="58A923235510066353EF29AD4AFD3E81" import="0">SQL/ArtDefines.sql</File>
-    <File md5="7947A810711FAB08F8ED38E2CB4F6DA7" import="0">SQL/Founder.sql</File>
+    <File md5="C9E00B0C347B4727DA73A5058BFDF18F" import="0">SQL/Founder.sql</File>
     <File md5="469C8AC4BC5969410DB981427181201B" import="0">SQL/Enhancer.sql</File>
     <File md5="46B56CF489093E13E830B356AF28E2A9" import="0">SQL/MODSupport.sql</File>
     <File md5="B2803898D09D27279489B01A1C17025E" import="0">SQL/Reformation.sql</File>
