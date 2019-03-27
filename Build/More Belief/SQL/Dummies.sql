@@ -1,15 +1,16 @@
 --===========================================
---War Cult
+-- Rise Moon Dummy
 --===========================================
-INSERT INTO BuildingClasses 	
+
+INSERT INTO BuildingClasses
 			(Type,									DefaultBuilding,				NoLimit)
-VALUES		('BUILDINGCLASS_D_WARCULT',				'BUILDING_D_WARCULT',			1)
+VALUES		('BUILDINGCLASS_DF_MOONSHINE_ARCANUM', 'BUILDING_DF_MOONSHINE_ARCANUM', 1);
 
-INSERT INTO Buildings 	
-			(Type,							BuildingClass,						Description,CapitalOnly, 	GoldMaintenance,	Cost,	FaithCost,	GreatWorkCount, NeverCapture,	NukeImmune, ConquestProb,	HurryCostModifier,	IconAtlas,			PortraitIndex, IsDummy)
-VALUES		('BUILDING_D_WARCULT',		'BUILDINGCLASS_D_WARCULT',				'nil',					0, 				0,			-1,			-1,				-1,				1,				1,			0,				-1,	'CIV_COLOR_ATLAS',						0,		1)
+INSERT INTO Buildings
+			(Type,								BuildingClass,						Description,				 GoldMaintenance,		Cost,	FaithCost,	GreatWorkCount, NeverCapture,	NukeImmune, ConquestProb,	HurryCostModifier,	IconAtlas,			PortraitIndex, IsDummy, GlobalGreatPeopleRateModifier, EmpireNeedsModifierGlobal)
+VALUES		('BUILDING_DF_MOONSHINE_ARCANUM','BUILDINGCLASS_DF_MOONSHINE_ARCANUM',	'Dummy Moonshine''s Arcanum',	 0,					-1,		-1,			-1,				1,				1,			0,				-1,					'CIV_COLOR_ATLAS',	0,				1,		'5',							'-5');
 
-INSERT INTO Building_YieldFromUnitProduction
-			(BuildingType, YieldType, Yield)
-VALUES		('BUILDING_D_WARCULT', 'YIELD_CULTURE', 5),
-			('BUILDING_D_WARCULT', 'YIELD_FAITH',	10);
+INSERT INTO Building_GlobalYieldModifiers ("BuildingType", "YieldType", "Yield") 
+VALUES ('BUILDING_DF_MOONSHINE_ARCANUM', 'YIELD_Faith', '5');
+
+
