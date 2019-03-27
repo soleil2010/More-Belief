@@ -2,11 +2,23 @@
 --======================================================================================================================================
 --Rise Moon
 --======================================================================================================================================
+
+
+---------------------------------
+--Belief
+---------------------------------
+
+INSERT INTO Beliefs ("Type",			"Description",	"ShortDescription", "Pantheon", "Founder", "Follower","FriendlyCityStateSpreadModifier","Tooltip","MissionaryInfluenceCS","CSYieldBonusFromSharedReligion")
+			 VALUES ('BELIEF_RISE_MOON', 'Description',	'Rise Moon',			'0',		'1',		'0',	'25'							,'tooltip','5',						'50');
+
+INSERT INTO Belief_BuildingClassFaithPurchase
+	(BeliefType, BuildingClassType)
+VALUES
+	('BELIEF_RISE_MOON', 'BUILDINGCLASS_MOONSHINE_ARCANUM');
+
 ---------------------------------
 -- Building Moonshine's Arcanum 
 ---------------------------------
-INSERT INTO Beliefs ("Type",			"Description",	"ShortDescription", "Pantheon", "Founder", "Follower","FriendlyCityStateSpreadModifier","Tooltip","MissionaryInfluenceCS","CSYieldBonusFromSharedReligion")
-			 VALUES ('BELIEF_RISE_MOON', 'Description',	'Rise Moon',			'0',		'1',		'0',	'25'							,'tooltip','5',						'50');
 
 -- 3 slots Litterature																																																																																																																																																																																																																																																																																																																										+15% global great people																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																									-15% maintenance																																																																																																																																																																																										
 INSERT INTO Buildings 
@@ -29,17 +41,6 @@ VALUES
 	('BUILDING_MOONSHINE_ARCANUM', 'YIELD_CULTURE', 2),
 	('BUILDING_MOONSHINE_ARCANUM', 'YIELD_SCIENCE', 2);
 
----------------------------------
---Belief
----------------------------------
-INSERT INTO Beliefs ("Type",				"Description",																																																																																																								"ShortDescription", "Pantheon", "Founder", "Follower,"MissionaryInfluenceCS","CSYieldBonusFromSharedReligion",	"Tooltip"																																																																																																																																																																																																																																																												)
-			 VALUES ('BELIEF_RISE_MOON',	'the [COLOR_GREEN]Rise Moon[ENDCOLOR] cult has the principle of being the least known possible, it teaches your citizens to know the world, so many supporters want to paint their knowledge [ICON_GREAT_ARTIST] or have offspring [ICON_CITIZEN] in order to leave a trace of their cult![NEWLINE][NEWLINE]Small empire: 1 to 5 Cities converted[NEWLINE]Medium empire: 6 to 9 Cities converted[NEWLINE]Big empire: more 9 Cities converted',	'Rise Moon',		'0',		'1',		'0'	 ,	'5',					'50'							,	'tooltip');
-
-
-INSERT INTO Belief_BuildingClassFaithPurchase
-	(BeliefType, BuildingClassType)
-VALUES
-	('BELIEF_RISE_MOON', 'BUILDINGCLASS_MOONSHINE_ARCANUM');
 
 ---------------------------------
 -- holy site 

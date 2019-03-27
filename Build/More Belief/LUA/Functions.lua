@@ -1,38 +1,34 @@
-function WarCult(PlayerID, BeliefID)
-
-	local player = Players[PlayerID]
-	local beliefID = BeliefTypes.BELIEF_WAR_CULT
-	local BuildingID = GameInfoTypes.BUILDING_D_WARCULT
-
-	if player:HasBelief(beliefID) and player:IsEverAlive() then
-		for city in player:Cities()
-		if city:IsCapital() then
-			city:SetNumRealBuilding(BuildingID, 1)
-		end
-	end
-end
-
-
-
 --=============================================================================================
 -- Name:		RiseMoon
 -- Description:	add Dummies when player has number cities below 9
 --=============================================================================================
-function RiseMoon()
-	local player = Players[PlayerID];	
+function RiseMoon(PlayerID)
+		local player = Players[PlayerID];	
+		local beliefID = GameInfoTypes["BELIEF_RISE_MOON"];
 	if (player:HasBelief(beliefID) and player:IsEverAlive()) then
-		local beliefID = BeliefTypes.BELIEF_MOON_RISE;
 		local dummy = GameInfoTypes.BUILDING_DF_MOONSHINE_ARCANUM;
 		local capital = player:GetCapitalCity();
 		local totCitiesWithMyReligion= Game.GetNumCitiesFollowing(player:GetReligionCreatedByPlayer());
 
-		print(Game.GetReligionName(player:GetReligionCreatedByPlayer()))		
-		print(Game.GetReligionName(player:GetReligionCreatedByPlayer()))		
-		print(Game.GetReligionName(player:GetReligionCreatedByPlayer()))		
-		print(Game.GetReligionName(player:GetReligionCreatedByPlayer()))		
-		print(Game.GetReligionName(player:GetReligionCreatedByPlayer()))		
-		print(Game.GetReligionName(player:GetReligionCreatedByPlayer()))		
-		print(Game.GetReligionName(player:GetReligionCreatedByPlayer()))		
+		if(totCitiesWithMyReligion < 6) then
+			capital:SetNumRealBuilding(dummy, 4);
+			print("4 dummies");
+		elseif(totCitiesWithMyReligion < 10) then
+			capital:SetNumRealBuilding(dummy, 2);
+			print("2 dummies");
+		else
+			capital:SetNumRealBuilding(dummy, 0);
+			print("0 dummies");
+		end
+
+		print("yeah!");
+		print(Game.GetReligionName(player:GetReligionCreatedByPlayer()));		
+		print(Game.GetReligionName(player:GetReligionCreatedByPlayer()));		
+		print(Game.GetReligionName(player:GetReligionCreatedByPlayer()));		
+		print(Game.GetReligionName(player:GetReligionCreatedByPlayer()));		
+		print(Game.GetReligionName(player:GetReligionCreatedByPlayer()));		
+		print(Game.GetReligionName(player:GetReligionCreatedByPlayer()));		
+		print(Game.GetReligionName(player:GetReligionCreatedByPlayer()));		
 	end
 end
 

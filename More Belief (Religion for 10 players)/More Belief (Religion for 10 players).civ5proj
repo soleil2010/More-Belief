@@ -82,6 +82,14 @@
         <FileName>SQL/RiseMoon.sql</FileName>
       </Action>
     </ModActions>
+    <ModContent>
+      <Content xmlns="">
+        <Type>InGameUIAddin</Type>
+        <Name>FunctionLUA</Name>
+        <Description>LUA codes</Description>
+        <FileName>LUA/Functions.lua</FileName>
+      </Content>
+    </ModContent>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Default' ">
     <OutputPath>.</OutputPath>
