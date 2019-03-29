@@ -2,7 +2,7 @@
 --======================================================================================================================================
 --Rise Moon
 --======================================================================================================================================
-
+UPDATE CustomModOptions SET Value = 1 WHERE Name = '"EVENTS_FOUND_RELIGION';
 
 ---------------------------------
 --Belief
@@ -49,7 +49,7 @@ VALUES
 INSERT INTO Building_ImprovementYieldChangesGlobal
 	(BuildingType, ImprovementType, YieldType, Yield)
 VALUES
-	('BELIEF_RISE_MOON', 'IMPROVEMENT_HOLY_SITE', 'YIELD_FOOD', 2);
+	('BELIEF_RISE_MOON', 'IMPROVEMENT_HOLY_SITE', 'YIELD_FOOD', 2),
 	('BELIEF_RISE_MOON', 'IMPROVEMENT_HOLY_SITE', 'YIELD_FAITH', 3);
 
 ---------------------------------

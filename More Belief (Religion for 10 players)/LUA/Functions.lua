@@ -3,12 +3,12 @@
 -- Description:	add Dummies when player has number cities below 9
 --=============================================================================================
 function RiseMoon(PlayerID)
-		local player = Players[PlayerID];	
-		local beliefID = GameInfoTypes["BELIEF_RISE_MOON"];
+	local player = Players[PlayerID];	
+	local beliefID = GameInfoTypes["BELIEF_RISE_MOON"];
 	if (player:HasBelief(beliefID) and player:IsEverAlive()) then
 		local dummy = GameInfoTypes.BUILDING_DF_MOONSHINE_ARCANUM;
 		local capital = player:GetCapitalCity();
-		local totCitiesWithMyReligion= Game.GetNumCitiesFollowing(player:GetReligionCreatedByPlayer());
+		local totCitiesWithMyReligion = Game.GetNumCitiesFollowing(player:GetReligionCreatedByPlayer());
 
 		if(totCitiesWithMyReligion < 6) then
 			capital:SetNumRealBuilding(dummy, 4);
@@ -26,5 +26,4 @@ function RiseMoon(PlayerID)
 end
 
 GameEvents.PlayerDoTurn.Add(RiseMoon)
-
 

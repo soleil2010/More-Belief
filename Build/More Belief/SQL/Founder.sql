@@ -1,7 +1,7 @@
 --===================================
 --Peace hegemony
 --===================================
-INSERT INTO Beliefs ("Type",		 "Description",									"ShortDescription", "Pantheon", "Founder", "Follower","FriendlyCityStateSpreadModifier","Tooltip","MissionaryInfluenceCS","CSYieldBonusFromSharedReligion")
+/*INSERT INTO Beliefs ("Type",		 "Description",									"ShortDescription", "Pantheon", "Founder", "Follower","FriendlyCityStateSpreadModifier","Tooltip","MissionaryInfluenceCS","CSYieldBonusFromSharedReligion")
 			 VALUES ('BELIEF_PEACE_HEGEMONY', 'Unlocks Peace Maker Wonder [COLOR_MAGENTA]+3 [ICON_PEACE] Faith, +3 [ICON_FOOD] Food; +5 [ICON_GOLDEN_AGE] Golden Age Points from Holy Sites; unlocks Reformation Belief[ENDCOLOR]). +50% Yields from Friendly/ Allied City States Following this Religon.[NEWLINE]Missionary are 25% stronger to friendly city state.',	'Peace Hegemony',			'0',		'1',		'0',		'25','(Unlocks Peace Maker Wonder [COLOR_MAGENTA]+3 [ICON_PEACE] Faith, +3 [ICON_FOOD] Food; +5 [ICON_GOLDEN_AGE] Golden Age Points from Holy Sites; unlocks Reformation Belief[ENDCOLOR]). +50% Yields from Friendly/ Allied City States Following this Religon.[NEWLINE]Missionary are 25% stronger to friendly city state.[NEWLINE]When missionary spread religion to a city-state, gain 5 influences towrds the city-state','5','50');
 
 INSERT INTO Buildings 
@@ -40,5 +40,5 @@ INSERT INTO Belief_YieldFromConquest
 	(BeliefType, YieldType, Yield)
 VALUES
 	('BELIEF_INTERFAITH_DIALOGUE', 'YIELD_CULTURE', 100);
-
+*/
 
