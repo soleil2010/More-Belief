@@ -6,10 +6,12 @@ function RiseMoon(PlayerID)
 	local player = Players[PlayerID];	
 	local beliefID = GameInfoTypes["BELIEF_RISE_MOON"];
 	if (player:HasBelief(beliefID) and player:IsEverAlive()) then
-		local dummy = GameInfoTypes.BUILDING_DF_MOONSHINE_ARCANUM;
+		local dummy = GameInfoTypes["BUILDING_DF_MOONSHINE_ARCANUM"];
+		local dummy2 = GameInfoTypes["BUILDING_DF_MOONSHINE_ARCANUM_BONUS"];
 		local capital = player:GetCapitalCity();
 		local totCitiesWithMyReligion = Game.GetNumCitiesFollowing(player:GetReligionCreatedByPlayer());
 
+		capital:SetNumRealBuilding(dummy2, 1);
 		if(totCitiesWithMyReligion < 6) then
 			capital:SetNumRealBuilding(dummy, 4);
 			print("4 dummies");
