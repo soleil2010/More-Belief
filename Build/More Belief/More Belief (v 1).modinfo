@@ -80,9 +80,9 @@
     <File md5="4AC7600EDD0FDC95015AA46E24DDE823" import="1">ART/ICON/JFD_PietyBeliefAtlas_80.dds</File>
     <File md5="B7DBB727AAC0B6EC97242F2ACB64B543" import="0">LUA/Functions.lua</File>
     <File md5="46F8CE174FB297B045E44AE60A855982" import="0">SQL/Dummies.sql</File>
-    <File md5="2F4C649DF7BBAE2E8A2900AC552990CD" import="0">SQL/Follower.sql</File>
+    <File md5="DE1D656D24134D16C9E9B936C8037434" import="0">SQL/Follower.sql</File>
     <File md5="58A923235510066353EF29AD4AFD3E81" import="0">SQL/ArtDefines.sql</File>
-    <File md5="C79387C7FA65F9ECF2D320C438DFA883" import="0">SQL/Founder.sql</File>
+    <File md5="8CC3EEA9C8DE8DFB6585F480FCEC301E" import="0">SQL/Founder.sql</File>
     <File md5="469C8AC4BC5969410DB981427181201B" import="0">SQL/Enhancer.sql</File>
     <File md5="3DBC2606439E72DAFED6BEEB548CFE7B" import="0">SQL/MODSupport.sql</File>
     <File md5="C839C423B42FE036B2428984FCF049AE" import="0">SQL/Reformation.sql</File>

@@ -8,14 +8,14 @@
 --===========================================================================================================
 INSERT INTO Buildings
 			(Type,				BuildingClass,			  Description, Civilopedia,			Strategy,	Help,																																																																																																											ConquestProb,	ReligiousPressureModifier,	ConversionModifier, Cost,	UnlockedByBelief,	FaithCost,	 EmpireNeedsModifier,		DefenseHappinessChange, Happiness,  ArtDefineTag,	MinAreaSize,	IconAtlas,			PortraitIndex)
-	VALUES	('BUILDING_LUPANAR', 'BUILDINGCLASS_LUPANAR',  'Lupanar', 'Civilopedia_Lupanar','Lup_Strat','-1 [ICON_HAPPINESS_3] Unhappiness from [ICON_FOOD]/[ICON_PRODUCTION] Distress, [ICON_CULTURE] Boredom, [ICON_RESEARCH] Illiteracy and [ICON_GOLD] Poverty. Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, and increases the city''s resistance to conversion by 10%.[NEWLINE] Gain [ICON_FOOD] and [ICON_PEACE] every time a citizen is born in the city. 10% [ICON_FOOD] in the city during Golden Age.', 0,					25,							-10,			-1,		1,					 200,				-5,								0,			1,			'TEMPLE',		-1,				'DF_BELIEF_ATLAS',	0);
+	VALUES	('BUILDING_LUPANAR', 'BUILDINGCLASS_LUPANAR',  'Lupanar', 'Civilopedia_Lupanar','Lup_Strat','Empire [ICON_HAPPINESS_3] Needs Modifier is reduce by -5% in this city.  Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, and increases the city''s resistance to conversion by 10%.[NEWLINE] Gain [ICON_FOOD] and [ICON_PEACE] every time a citizen is born in the city. 10% [ICON_FOOD] in the city during Golden Age.', 0,					25,							-10,			-1,		1,					 200,				-5,								0,			1,			'TEMPLE',		-1,				'DF_BELIEF_ATLAS',	0);
 	
 INSERT INTO BuildingClasses 
 			(Type,						DefaultBuilding,  Description)
 	VALUES	('BUILDINGCLASS_LUPANAR',	'BUILDING_LUPANAR',	 'Lupanar');
 
 INSERT INTO Beliefs ("Type",			"Description",									"ShortDescription", "Pantheon", "Founder", "Follower",		"Tooltip")
-			 VALUES ('BELIEF_LUPANAR',	'Use [ICON_PEACE] Faith to purchase Lupanar',	'Lupanar',			'0',		'0',		'1',		'+2 [ICON_PEACE] Faith[NEWLINE]+2 [ICON_FOOD] Food [NEWLINE]+1 [ICON_CULTURE] Culture[NEWLINE][NEWLINE]-1 [ICON_HAPPINESS_3] Unhappiness from [ICON_FOOD]/[ICON_PRODUCTION] Distress, [ICON_CULTURE] Boredom, [ICON_RESEARCH] Illiteracy and [ICON_GOLD] Poverty. Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, and increases the city''s resistance to conversion by 10%.[NEWLINE] Gain [ICON_FOOD] and [ICON_PEACE] every time a citizen is born in the city. 10% [ICON_FOOD] in the city during Golden Age.');
+			 VALUES ('BELIEF_LUPANAR',	'Use [ICON_PEACE] Faith to purchase Lupanar',	'Lupanar',			'0',		'0',		'1',		'+2 [ICON_PEACE] Faith[NEWLINE]+1 [ICON_CULTURE][NEWLINE]+1 Happiness Culture[NEWLINE][NEWLINE]Empire [ICON_HAPPINESS_3] Needs Modifier is reduce by -5% in this city. Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, and increases the city''s resistance to conversion by 10%.[NEWLINE] Gain [ICON_FOOD] and [ICON_PEACE] every time a citizen is born in the city. 10% [ICON_FOOD] in the city during Golden Age.');
 
 INSERT INTO Belief_BuildingClassFaithPurchase 
 			(BeliefType,			 BuildingClassType)
@@ -110,7 +110,7 @@ VALUES												('BUILDING_WAR_CULT', 'YIELD_PRODUCTION', '1');
 --===========================================================================================================
 
 INSERT INTO Beliefs ("Type",				"Description",																														"ShortDescription",		"Pantheon", "Founder", "Follower",	UnitProductionModifier,	"Tooltip")
-			 VALUES ('BELIEF_GODOPULENCE', '+2 [ICON_PEACE] Faith, +2 [ICON_GOLD] Gold, +1 [ICON_CULTURE] Culture, +1 [ICON_FOOD] Food per luxury ressources owned',		'God of opulence',		'0',		'0',		'1',		0,						'+1 [ICON_PEACE] Faith[NEWLINE]+1 [ICON_GOLD] Gold[NEWLINE]+1 [ICON_CULTURE] Culture[NEWLINE]+1 [ICON_FOOD] Food[NEWLINE]for each unique luxury ressource owned(Imported and Exported)');
+			 VALUES ('BELIEF_GODOPULENCE', '+2 of each yield when in cities with your religion and connected to your capital',		'God of opulence',		'0',		'0',		'1',		0,						'+2 of each yield when in cities with your religion and connected to your capital');
 /*
 INSERT INTO Belief_YieldPerLux
 			(BeliefType,			YieldType, Yield)
