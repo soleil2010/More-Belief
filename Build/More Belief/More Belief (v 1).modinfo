@@ -49,6 +49,25 @@
     <File md5="BF7C80CEE58B1E062403E69DE2F9800D" import="1">Add/Historical religion from subtract/SQL/HistoricalReligionsMasterPreference.sql</File>
     <File md5="31810D8423BE0858422D242AEF5E7DEF" import="1">Add/Historical religion from subtract/SQL/HistoricalReligionsMasterReligion.sql</File>
     <File md5="E60F7D415735DE86F4699D3091F65A34" import="0">Add/Historical religion from subtract/XML/HistoricalReligionsMasterText.xml</File>
+    <File md5="D7828AFA80CA6B812CDA882BBDCCE104" import="1">Add/More religion Icons/strange-fonticons.dds</File>
+    <File md5="43A58F743D507759EA64C6176C41CB44" import="1">Add/More religion Icons/strange-fonticons.ggxml</File>
+    <File md5="62F616417C3216ABC35FD6EF3AD9A51E" import="1">Add/More religion Icons/strange128.dds</File>
+    <File md5="6F0AF18B6429844EDB98A9CD96FD149C" import="1">Add/More religion Icons/strange16.dds</File>
+    <File md5="40C6789D476924A9593FA563AD54880D" import="1">Add/More religion Icons/strange24.dds</File>
+    <File md5="8DD7A337B67DEA621A8C7BBDA01B365A" import="1">Add/More religion Icons/strange32.dds</File>
+    <File md5="4F96B75C3141A345454042D25420BA4A" import="1">Add/More religion Icons/strange48.dds</File>
+    <File md5="BDFFE47395D527EE24DBE90B974906EC" import="1">Add/More religion Icons/strange64.dds</File>
+    <File md5="B681B088CCFDCF1FD1A737CEE2815FC5" import="1">Add/More religion Icons/strange80.dds</File>
+    <File md5="74D5FB17C7E6F30304E89FDEF5E8E0C1" import="1">Add/More religion Icons/strangeB-fonticons.dds</File>
+    <File md5="4AB1FA8B763C4FB1F23B55883BEDFF61" import="1">Add/More religion Icons/strangeB-fonticons.ggxml</File>
+    <File md5="36B145B462F7816D61EBFDB988DB1EA1" import="1">Add/More religion Icons/strangeB128.dds</File>
+    <File md5="395535B473AD76A9EC77CDD77E5B9C4F" import="1">Add/More religion Icons/strangeB16.dds</File>
+    <File md5="1BFEC6704DFBA1263FB0C307E6AFA069" import="1">Add/More religion Icons/strangeB24.dds</File>
+    <File md5="10FE9C38E027F3EC847344D9ECCEB55A" import="1">Add/More religion Icons/strangeB32.dds</File>
+    <File md5="CBB8E4F3C56E2584A75B24B98101CF17" import="1">Add/More religion Icons/strangeB48.dds</File>
+    <File md5="6BF76828DB9B1D1A7925C7779BC2F668" import="1">Add/More religion Icons/strangeB64.dds</File>
+    <File md5="522D4D09290C491E3F1BFBFEBF75B987" import="1">Add/More religion Icons/strangeB80.dds</File>
+    <File md5="B08B8F5EC4908AF3EFE5BBBAA6815F39" import="0">Add/More religion Icons/strangereligions.xml</File>
     <File md5="7E4D0534A1A6D033DE045110724C6C02" import="0">Add/RemoveFaithHuts.xml</File>
     <File md5="9E50E67B467DB12EE2DFFC8036DCD77A" import="1">ART/ICON/3UCplayhouse128.dds</File>
     <File md5="C464A918AD5F2BC5C818F4921172F008" import="1">ART/ICON/3UCplayhouse256.dds</File>
@@ -59,14 +78,14 @@
     <File md5="7B97327661C4D2A380AD3BA3639CD042" import="1">ART/ICON/JFD_PietyBeliefAtlas_45.dds</File>
     <File md5="FBD3D3FEB9FFF9CDD30E606831324F0E" import="1">ART/ICON/JFD_PietyBeliefAtlas_64.dds</File>
     <File md5="4AC7600EDD0FDC95015AA46E24DDE823" import="1">ART/ICON/JFD_PietyBeliefAtlas_80.dds</File>
-    <File md5="0BD4ADDB61323B57E07191DF3EDEE4DE" import="0">LUA/Functions.lua</File>
-    <File md5="F1A56CFFC9E981611D193CC4982504CF" import="0">SQL/Dummies.sql</File>
-    <File md5="355AB28245D0740938CE22CE555B6C99" import="0">SQL/Follower.sql</File>
+    <File md5="B7DBB727AAC0B6EC97242F2ACB64B543" import="0">LUA/Functions.lua</File>
+    <File md5="46F8CE174FB297B045E44AE60A855982" import="0">SQL/Dummies.sql</File>
+    <File md5="2F4C649DF7BBAE2E8A2900AC552990CD" import="0">SQL/Follower.sql</File>
     <File md5="58A923235510066353EF29AD4AFD3E81" import="0">SQL/ArtDefines.sql</File>
-    <File md5="7947A810711FAB08F8ED38E2CB4F6DA7" import="0">SQL/Founder.sql</File>
+    <File md5="C79387C7FA65F9ECF2D320C438DFA883" import="0">SQL/Founder.sql</File>
     <File md5="469C8AC4BC5969410DB981427181201B" import="0">SQL/Enhancer.sql</File>
-    <File md5="46B56CF489093E13E830B356AF28E2A9" import="0">SQL/MODSupport.sql</File>
-    <File md5="B2803898D09D27279489B01A1C17025E" import="0">SQL/Reformation.sql</File>
+    <File md5="3DBC2606439E72DAFED6BEEB548CFE7B" import="0">SQL/MODSupport.sql</File>
+    <File md5="C839C423B42FE036B2428984FCF049AE" import="0">SQL/Reformation.sql</File>
   </Files>
   <Actions>
     <OnModActivated>
@@ -81,6 +100,7 @@
       <UpdateDatabase>Add/Historical religion from subtract/SQL/HistoricalReligionsMasterArt.sql</UpdateDatabase>
       <UpdateDatabase>Add/Historical religion from subtract/SQL/HistoricalReligionsMasterPreference.sql</UpdateDatabase>
       <UpdateDatabase>Add/Historical religion from subtract/SQL/HistoricalReligionsMasterReligion.sql</UpdateDatabase>
+      <UpdateDatabase>Add/More religion Icons/strangereligions.xml</UpdateDatabase>
     </OnModActivated>
   </Actions>
 </Mod>

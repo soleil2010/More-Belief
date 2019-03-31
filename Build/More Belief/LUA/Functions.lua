@@ -1,18 +1,31 @@
-function WarCult(PlayerID, BeliefID)
+--compter le nombre de ville convertie
 
+--Ajouter police dummy pour crusader
+function CrusaderRework(PlayerID,ReligionID,Belief1ID)
 local player = Players[PlayerID]
-local beliefID = BeliefTypes.BELIEF_WAR_CULT
-local BuildingID = GameInfoTypes.BUILDING_D_WARCULT
+local Belief1ID = GameInfo.Beliefs.BELIEF_EVANGELISM.ID
+local PolicyID = GameInfoTypes.POLICY_MB_HOLY_CRUSADER
 
-	if player:HasBelief(beliefID) and player:IsEverAlive() then
-		 for city in player:Cities()
-			if city:IsCapital() then
-			city:SetNumRealBuilding(BuildingID, 1)
-			end
+	if player:hasBelief(Belief1ID) then
+	local ReligionID = Player:GetReligionCreatedByPlayer()
+	player:SetHasPolicy(PolicyID, true)
 	end
 end
 
---compter le nombre de ville convertie
+--Player:HasReligionInMostCities(ReligionType religion)
+GameEvents.ReligionReformed.Add(CrusaderRework)
+--[[
+function CrusaderAppli(PlayerID, ReligionID, CityX, CityY)
+local player = Players[PlayerID]
+local Belief1ID = GameInfo.Beliefs.BELIEF_EVANGELISM.ID
 
-
-
+	if player:hasBelief(Belief1ID) then
+		local ReligionID = Player:GetReligionCreatedByPlayer()
+		local x = pCity:plot():GetX();
+		local y = pCity:plot():GetY();
+		if Player:HasReligionInMostCities(ReligionID) then
+		player:SetHasPolicy(PolicyID, true)
+	end
+end
+GameEvents.CityConvertsReligion.Add(CrusaderAppli)
+]]

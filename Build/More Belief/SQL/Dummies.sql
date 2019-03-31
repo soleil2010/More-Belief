@@ -13,3 +13,23 @@ INSERT INTO Building_YieldFromUnitProduction
 			(BuildingType, YieldType, Yield)
 VALUES		('BUILDING_D_WARCULT', 'YIELD_CULTURE', 5),
 			('BUILDING_D_WARCULT', 'YIELD_FAITH',	10);
+
+ --===========================================
+ --Dummies
+ --===========================================
+
+------------------------------
+-- Policies (NEW)
+------------------------------
+INSERT INTO Policies
+		(Type,						Description,						IsDummy)
+VALUES	('POLICY_MB_HOLY_CRUSADER',	'Crusader',	1);
+------------------------------
+-- Policy_BuildingClassProductionModifiers (NEW)
+------------------------------
+
+INSERT INTO Policy_BuildingClassProductionModifiers
+			("PolicyType", "BuildingClassType", "ProductionModifier")
+VALUES		('POLICY_MB_HOLY_CRUSADER', 'BUILDINGCLASS_BARRACKS',			'100'),
+			('POLICY_MB_HOLY_CRUSADER', 'BUILDINGCLASS_ARMORY',				'100'),
+			('POLICY_MB_HOLY_CRUSADER', 'BUILDINGCLASS_MILITARY_ACADEMY',	'100');

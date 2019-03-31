@@ -6,6 +6,9 @@
 ------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS COMMUNITY (Type TEXT, Value INTEGER);
 
+--Great Diplomat's promotions from Sachem's Council
+UPDATE CustomModOptions	SET Value = 1 WHERE Name = 'EVENTS_FOUND_RELIGION';
+
 --Dummy Policies
 
 INSERT INTO COMMUNITY (Type, Value)
