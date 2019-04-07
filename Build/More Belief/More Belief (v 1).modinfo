@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="8afc9cb3-849c-4eaf-b319-edb33987408b" version="1">
+  <Properties>
+    <Name>More Belief</Name>
+    <Stability>Alpha</Stability>
+    <Teaser>Religion pour 10 joueurs</Teaser>
+    <Description>Religion pour 10 joueurs</Description>
+    <Authors>Florian</Authors>
+    <SpecialThanks>MOI</SpecialThanks>
+    <HideSetupGame>0</HideSetupGame>
+    <AffectsSavedGames>1</AffectsSavedGames>
+    <MinCompatibleSaveVersion>0</MinCompatibleSaveVersion>
+    <SupportsSinglePlayer>1</SupportsSinglePlayer>
+    <SupportsMultiplayer>1</SupportsMultiplayer>
+    <SupportsHotSeat>1</SupportsHotSeat>
+    <SupportsMac>1</SupportsMac>
+    <ReloadAudioSystem>0</ReloadAudioSystem>
+    <ReloadLandmarkSystem>0</ReloadLandmarkSystem>
+    <ReloadStrategicViewSystem>0</ReloadStrategicViewSystem>
+    <ReloadUnitSystem>0</ReloadUnitSystem>
+  </Properties>
+  <Dependencies />
+  <References />
+  <Blocks />
+  <Files>
+    <File md5="C4933C99E92EE003C92D3DF8593EB2D3" import="1">Add/Historical religion from subtract/Art/HistoricalReligionsMaster128.dds</File>
+    <File md5="D34D65755D92226BB78480204E34C795" import="1">Add/Historical religion from subtract/Art/HistoricalReligionsMaster16.dds</File>
+    <File md5="89B712FBF090D67F2FA1975EEF18D556" import="1">Add/Historical religion from subtract/Art/HistoricalReligionsMaster214.dds</File>
+    <File md5="0092D0D303957109B40180DA5F0394A5" import="1">Add/Historical religion from subtract/Art/HistoricalReligionsMaster24.dds</File>
+    <File md5="E0A84913FA69C02E0AB64B9A83EAEC30" import="1">Add/Historical religion from subtract/Art/HistoricalReligionsMaster256.dds</File>
+    <File md5="E9CB3FE5B421E8945168E9B5139FF989" import="1">Add/Historical religion from subtract/Art/HistoricalReligionsMaster32.dds</File>
+    <File md5="AF3006C9EC99389C783682DC8EFD2C89" import="1">Add/Historical religion from subtract/Art/HistoricalReligionsMaster48.dds</File>
+    <File md5="58B0042E09FC97D56519BA6704B282D0" import="1">Add/Historical religion from subtract/Art/HistoricalReligionsMaster64.dds</File>
+    <File md5="1133D4B4B1D776CC97EF7336A19499FD" import="1">Add/Historical religion from subtract/Art/HistoricalReligionsMaster80.dds</File>
+    <File md5="6DB1BB720863B26480B019F81C0DAAC3" import="1">Add/Historical religion from subtract/Art/HistoricalReligionsMasterFontIcons.dds</File>
+    <File md5="091AFF29C8CABE7A284F743451203DDF" import="1">Add/Historical religion from subtract/Art/HistoricalReligionsMasterFontIcons.ggxml</File>
+    <File md5="E8FBF92BB82D6515C5B25E317D35F869" import="1">Add/Historical religion from subtract/Art/Temp/HRCTemp128.dds</File>
+    <File md5="C42B3C65E1559B759BFA55F28A592391" import="1">Add/Historical religion from subtract/Art/Temp/HRCTemp16.dds</File>
+    <File md5="603EE216B61671D0544013146FAEE9AA" import="1">Add/Historical religion from subtract/Art/Temp/HRCTemp214.dds</File>
+    <File md5="D99A47ED99F7CE25E97FD4FB9D62B921" import="1">Add/Historical religion from subtract/Art/Temp/HRCTemp24.dds</File>
+    <File md5="8C71EC27D03BA25ED81AF84D1B25E6EB" import="1">Add/Historical religion from subtract/Art/Temp/HRCTemp256.dds</File>
+    <File md5="BE5DAF8C45484AF1A6280EC593E751E1" import="1">Add/Historical religion from subtract/Art/Temp/HRCTemp32.dds</File>
+    <File md5="273D282CF8A4C1660CA2F7872FCCA760" import="1">Add/Historical religion from subtract/Art/Temp/HRCTemp48.dds</File>
+    <File md5="4BECBCD9E7F5D102F5F78676468CFFF4" import="1">Add/Historical religion from subtract/Art/Temp/HRCTemp64.dds</File>
+    <File md5="1F345D84CCE8FC4EC638EC1ED014216C" import="1">Add/Historical religion from subtract/Art/Temp/HRCTemp80.dds</File>
+    <File md5="230EA59A4F8755B2BD70E78309880D41" import="1">Add/Historical religion from subtract/Art/Temp/HRCTempFontIcons.dds</File>
+    <File md5="3AC9C5FABA2C0F03A12ED66995162CDA" import="1">Add/Historical religion from subtract/Art/Temp/HRCTempFontIcons.ggxml</File>
+    <File md5="691B75CD3D589F67D316D289AE74CC5A" import="1">Add/Historical religion from subtract/SQL/HistoricalReligionsMasterArt.sql</File>
+    <File md5="BF7C80CEE58B1E062403E69DE2F9800D" import="1">Add/Historical religion from subtract/SQL/HistoricalReligionsMasterPreference.sql</File>
+    <File md5="31810D8423BE0858422D242AEF5E7DEF" import="1">Add/Historical religion from subtract/SQL/HistoricalReligionsMasterReligion.sql</File>
+    <File md5="E60F7D415735DE86F4699D3091F65A34" import="0">Add/Historical religion from subtract/XML/HistoricalReligionsMasterText.xml</File>
+    <File md5="7E4D0534A1A6D033DE045110724C6C02" import="0">Add/RemoveFaithHuts.xml</File>
+    <File md5="9E50E67B467DB12EE2DFFC8036DCD77A" import="1">ART/ICON/3UCplayhouse128.dds</File>
+    <File md5="C464A918AD5F2BC5C818F4921172F008" import="1">ART/ICON/3UCplayhouse256.dds</File>
+    <File md5="CA5C4DDA86484C270CB514E2D6192814" import="1">ART/ICON/3UCplayhouse45.dds</File>
+    <File md5="E351465B1A0843E277665873C3160F3C" import="1">ART/ICON/3UCplayhouse64.dds</File>
+    <File md5="D72BDAD7CA600E8E0F6B578B4BBCFF3C" import="1">ART/ICON/JFD_PietyBeliefAtlas_128.dds</File>
+    <File md5="B7BE84E6BF994913FEFFCA63E6AAF9A5" import="1">ART/ICON/JFD_PietyBeliefAtlas_256.dds</File>
+    <File md5="7B97327661C4D2A380AD3BA3639CD042" import="1">ART/ICON/JFD_PietyBeliefAtlas_45.dds</File>
+    <File md5="FBD3D3FEB9FFF9CDD30E606831324F0E" import="1">ART/ICON/JFD_PietyBeliefAtlas_64.dds</File>
+    <File md5="4AC7600EDD0FDC95015AA46E24DDE823" import="1">ART/ICON/JFD_PietyBeliefAtlas_80.dds</File>
+    <File md5="E0EBD8E9F7D52395069BA4AE0187091A" import="0">LUA/Functions.lua</File>
+    <File md5="6A98AB5B1EC8E2CD8ED2A865DC9440C8" import="0">SQL/Dummies.sql</File>
+    <File md5="355AB28245D0740938CE22CE555B6C99" import="0">SQL/Follower.sql</File>
+    <File md5="58A923235510066353EF29AD4AFD3E81" import="0">SQL/ArtDefines.sql</File>
+    <File md5="06A01E4B8A12C33BD595D5437D473A28" import="0">SQL/Founder.sql</File>
+    <File md5="469C8AC4BC5969410DB981427181201B" import="0">SQL/Enhancer.sql</File>
+    <File md5="46B56CF489093E13E830B356AF28E2A9" import="0">SQL/MODSupport.sql</File>
+    <File md5="B2803898D09D27279489B01A1C17025E" import="0">SQL/Reformation.sql</File>
+    <File md5="DC7567185FA2B80CF2CDFC9107E1C7AA" import="0">SQL/RiseMoon.sql</File>
+  </Files>
+  <Actions>
+    <OnModActivated>
+      <UpdateDatabase>SQL/MODSupport.sql</UpdateDatabase>
+      <UpdateDatabase>SQL/Enhancer.sql</UpdateDatabase>
+      <UpdateDatabase>Add/RemoveFaithHuts.xml</UpdateDatabase>
+      <UpdateDatabase>SQL/ArtDefines.sql</UpdateDatabase>
+      <UpdateDatabase>SQL/Follower.sql</UpdateDatabase>
+      <UpdateDatabase>SQL/Founder.sql</UpdateDatabase>
+      <UpdateDatabase>SQL/Reformation.sql</UpdateDatabase>
+      <UpdateDatabase>Add/Historical religion from subtract/XML/HistoricalReligionsMasterText.xml</UpdateDatabase>
+      <UpdateDatabase>Add/Historical religion from subtract/SQL/HistoricalReligionsMasterArt.sql</UpdateDatabase>
+      <UpdateDatabase>Add/Historical religion from subtract/SQL/HistoricalReligionsMasterPreference.sql</UpdateDatabase>
+      <UpdateDatabase>Add/Historical religion from subtract/SQL/HistoricalReligionsMasterReligion.sql</UpdateDatabase>
+      <UpdateDatabase>SQL/RiseMoon.sql</UpdateDatabase>
+      <UpdateDatabase>SQL/Dummies.sql</UpdateDatabase>
+    </OnModActivated>
+  </Actions>
+  <EntryPoints>
+    <EntryPoint type="InGameUIAddin" file="LUA/Functions.lua">
+      <Name>FunctionLUA</Name>
+      <Description>LUA codes</Description>
+    </EntryPoint>
+  </EntryPoints>
+</Mod>
