@@ -5,22 +5,40 @@
 function RiseMoon(PlayerID)
 	local player = Players[PlayerID];	
 	local beliefID = GameInfoTypes["BELIEF_RISE_MOON"];
+	local ArcanumBonus = GameInfoTypes["BUILDING_DF_MOONSHINE_ARCANUM_BONUS"];
+
 	if (player:HasBelief(beliefID) and player:IsEverAlive()) then
-		local dummy = GameInfoTypes["BUILDING_DF_MOONSHINE_ARCANUM"];
-		local dummy2 = GameInfoTypes["BUILDING_DF_MOONSHINE_ARCANUM_BONUS"];
 		local capital = player:GetCapitalCity();
+		local Arcanum = GameInfoTypes["BUILDING_DF_MOONSHINE_ARCANUM"];
+		local ArcanumReformation = GameInfoTypes["BUILDING_DF_MOONSHINE_ARCANUM_REFORMATION"];
 		local totCitiesWithMyReligion = Game.GetNumCitiesFollowing(player:GetReligionCreatedByPlayer());
 
-		capital:SetNumRealBuilding(dummy2, 1);
-		if(totCitiesWithMyReligion < 6) then
-			capital:SetNumRealBuilding(dummy, 4);
-			print("4 dummies");
-		elseif(totCitiesWithMyReligion < 10) then
-			capital:SetNumRealBuilding(dummy, 2);
-			print("2 dummies");
+		-- if player doesn't lost him religion
+		if(totCitiesWithMyReligion > 0) then
+			capital:SetNumRealBuilding(ArcanumBonus, 1);
+
+			if(totCitiesWithMyReligion < 6) then
+				-- add 4 BUILDING_DF_MOONSHINE_ARCANUM (tot: 20% each bonus)
+				capital:SetNumRealBuilding(Arcanum, 4);
+				print("RiseMoon has built: 4 dummies");
+			elseif(totCitiesWithMyReligion < 10) then
+				-- add 2 BUILDING_DF_MOONSHINE_ARCANUM (tot: 10% each bonus)
+				capital:SetNumRealBuilding(Arcanum, 2);
+				print("RiseMoon has built: 2 dummies");
+			else
+				-- remove all dummies
+				capital:SetNumRealBuilding(Arcanum, 0);
+				print("RiseMoon has built: 0 dummies");
+			end
+
+			-- remove or add followers reformation 
+			if(	capital:IsHasBuilding(GameInfoTypes["BUILDING_TCM_GERMANY_TEUTONIC_ORDER"]) or	capital:IsHasBuilding(GameInfoTypes["BUILDING_GERMANY_TEUTONIC_ORDER"]) or capital:IsHasBuilding(GameInfoTypes["BUILDING_KREMLIN"]) ) then
+				capital:SetNumRealBuilding(ArcanumReformation, 0);
+			else
+				capital:SetNumRealBuilding(ArcanumReformation, 1);
+			end
 		else
-			capital:SetNumRealBuilding(dummy, 0);
-			print("0 dummies");
+			capital:SetNumRealBuilding(ArcanumBonus, 0);
 		end
 
 		print("yeah!");
