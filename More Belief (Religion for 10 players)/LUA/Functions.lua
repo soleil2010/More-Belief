@@ -31,8 +31,12 @@ function RiseMoon(PlayerID)
 				print("RiseMoon has built: 0 dummies");
 			end
 
+			local iTeutonicOrder = player:CountNumBuildings(GameInfoTypes["BUILDING_TCM_GERMANY_TEUTONIC_ORDER"]);
+			local iTCMTeutonicOrder = player:CountNumBuildings(GameInfoTypes["BUILDING_GERMANY_TEUTONIC_ORDER"]);
+			local iKREMLIN = player:CountNumBuildings(GameInfoTypes["BUILDING_KREMLIN"]);
+
 			-- remove or add followers reformation 
-			if(	capital:IsHasBuilding(GameInfoTypes["BUILDING_TCM_GERMANY_TEUTONIC_ORDER"]) or	capital:IsHasBuilding(GameInfoTypes["BUILDING_GERMANY_TEUTONIC_ORDER"]) or capital:IsHasBuilding(GameInfoTypes["BUILDING_KREMLIN"]) ) then
+			if(	iTeutonicOrder > 0 or iTCMTeutonicOrder > 0 or iKREMLIN > 0 ) then
 				capital:SetNumRealBuilding(ArcanumReformation, 0);
 			else
 				capital:SetNumRealBuilding(ArcanumReformation, 1);
