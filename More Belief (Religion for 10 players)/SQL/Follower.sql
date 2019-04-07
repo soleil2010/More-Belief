@@ -15,7 +15,7 @@ INSERT INTO BuildingClasses
 	VALUES	('BUILDINGCLASS_LUPANAR',	'BUILDING_LUPANAR',	 'Lupanar');
 
 INSERT INTO Beliefs ("Type",			"Description",									"ShortDescription", "Pantheon", "Founder", "Follower",		"Tooltip")
-			 VALUES ('BELIEF_LUPANAR',	'Use [ICON_PEACE] Faith to purchase Lupanar',	'Lupanar',			'0',		'0',		'1',		'+2 [ICON_PEACE] Faith[NEWLINE]+1 [ICON_CULTURE][NEWLINE]+1 Happiness Culture[NEWLINE][NEWLINE]Empire [ICON_HAPPINESS_3] Needs Modifier is reduce by -5% in this city. Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, and increases the city''s resistance to conversion by 10%.[NEWLINE] Gain [ICON_FOOD] and [ICON_PEACE] every time a citizen is born in the city. 10% [ICON_FOOD] in the city during Golden Age.');
+			 VALUES ('BELIEF_LUPANAR',	'Use [ICON_PEACE] Faith to purchase Lupanar',	'Lupanar',			'0',		'0',		'1',		'+2 [ICON_PEACE] Faith[NEWLINE]+1 [ICON_CULTURE][NEWLINE]+1 [ICON_HAPPINESS_1] Happiness[NEWLINE][NEWLINE]Empire [ICON_HAPPINESS_3] Needs Modifier is reduce by -5% in this city. Boosts Pressure of [ICON_RELIGION] Religious Majority emanating from this city by 25%, and increases the city''s resistance to conversion by 10%.[NEWLINE] Gain [ICON_FOOD] and [ICON_PEACE] every time a citizen is born in the city. 10% [ICON_FOOD] in the city during Golden Age.');
 
 INSERT INTO Belief_BuildingClassFaithPurchase 
 			(BeliefType,			 BuildingClassType)
@@ -61,14 +61,14 @@ INSERT INTO Belief_BuildingClassFaithPurchase
 INSERT INTO Building_YieldChanges
 			(BuildingType,			YieldType,		Yield)
 	VALUES	('BUILDING_JINJA',	'YIELD_FAITH',	3 ),		
-			('BUILDING_JINJA',	'YIELD_GREAT_GENERAL_POINTS',1 );
+			('BUILDING_JINJA',	'YIELD_GREAT_GENERAL_POINTS',2 );
 
 
 
 	INSERT INTO Building_ImprovementYieldChanges
 				(BuildingType,		ImprovementType,	 YieldType,		Yield)
-		VALUES	('BUILDING_JINJA',	'IMPROVEMENT_FORT',	 'YIELD_FOOD',	2),
-				('BUILDING_JINJA',	'IMPROVEMENT_CITADEL', 'YIELD_FOOD',	3),
+		VALUES	('BUILDING_JINJA',	'IMPROVEMENT_FORT',	 'YIELD_FOOD',	3),
+				('BUILDING_JINJA',	'IMPROVEMENT_CITADEL', 'YIELD_FOOD',	4),
 				('BUILDING_JINJA',	'IMPROVEMENT_FORT',	 'YIELD_PRODUCTION',	1),
 				('BUILDING_JINJA',	'IMPROVEMENT_CITADEL', 'YIELD_PRODUCTION',	1);
 INSERT INTO Building_UnhappinessNeedsFlatReduction ("BuildingType", "YieldType", "Yield") 
