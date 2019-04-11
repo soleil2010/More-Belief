@@ -78,15 +78,15 @@
     <File md5="7B97327661C4D2A380AD3BA3639CD042" import="1">ART/ICON/JFD_PietyBeliefAtlas_45.dds</File>
     <File md5="FBD3D3FEB9FFF9CDD30E606831324F0E" import="1">ART/ICON/JFD_PietyBeliefAtlas_64.dds</File>
     <File md5="4AC7600EDD0FDC95015AA46E24DDE823" import="1">ART/ICON/JFD_PietyBeliefAtlas_80.dds</File>
-    <File md5="E0EBD8E9F7D52395069BA4AE0187091A" import="0">LUA/Functions.lua</File>
+    <File md5="7EFC41A21CB5496ED293D172999837F6" import="0">LUA/Functions.lua</File>
     <File md5="6A98AB5B1EC8E2CD8ED2A865DC9440C8" import="0">SQL/Dummies.sql</File>
-    <File md5="355AB28245D0740938CE22CE555B6C99" import="0">SQL/Follower.sql</File>
+    <File md5="CCDDB96AA71E975FAE57CA5EC2112546" import="0">SQL/Follower.sql</File>
     <File md5="58A923235510066353EF29AD4AFD3E81" import="0">SQL/ArtDefines.sql</File>
-    <File md5="06A01E4B8A12C33BD595D5437D473A28" import="0">SQL/Founder.sql</File>
+    <File md5="8700FF61B27235258D9F6FECA924A41C" import="0">SQL/Founder.sql</File>
     <File md5="469C8AC4BC5969410DB981427181201B" import="0">SQL/Enhancer.sql</File>
-    <File md5="46B56CF489093E13E830B356AF28E2A9" import="0">SQL/MODSupport.sql</File>
+    <File md5="3DBC2606439E72DAFED6BEEB548CFE7B" import="0">SQL/MODSupport.sql</File>
     <File md5="B2803898D09D27279489B01A1C17025E" import="0">SQL/Reformation.sql</File>
-    <File md5="DC7567185FA2B80CF2CDFC9107E1C7AA" import="0">SQL/RiseMoon.sql</File>
+    <File md5="F606179DC336F79C4D06C80275F5FE21" import="0">SQL/RiseMoon.sql</File>
   </Files>
   <Actions>
     <OnModActivated>
