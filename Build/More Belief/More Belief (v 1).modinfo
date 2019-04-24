@@ -86,7 +86,7 @@
     <File md5="469C8AC4BC5969410DB981427181201B" import="0">SQL/Enhancer.sql</File>
     <File md5="3DBC2606439E72DAFED6BEEB548CFE7B" import="0">SQL/MODSupport.sql</File>
     <File md5="B2803898D09D27279489B01A1C17025E" import="0">SQL/Reformation.sql</File>
-    <File md5="7ED3B051CE65811058D8F43FBB57F596" import="0">SQL/WordOfMouth.sql</File>
+    <File md5="ED3D27572288B41FCC2ED7A7C993E458" import="0">SQL/WordOfMouth.sql</File>
   </Files>
   <Actions>
     <OnModActivated>
