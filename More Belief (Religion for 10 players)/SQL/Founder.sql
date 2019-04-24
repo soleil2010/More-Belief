@@ -40,4 +40,4 @@ INSERT INTO Belief_YieldFromConquest
 	(BeliefType, YieldType, Yield)
 VALUES
 	('BELIEF_INTERFAITH_DIALOGUE', 'YIELD_CULTURE', 100);
-*/
+

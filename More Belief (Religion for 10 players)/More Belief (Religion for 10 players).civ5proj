@@ -79,7 +79,7 @@
       <Action>
         <Set>OnModActivated</Set>
         <Type>UpdateDatabase</Type>
-        <FileName>SQL/RiseMoon.sql</FileName>
+        <FileName>SQL/WordOfMouth.sql</FileName>
       </Action>
       <Action>
         <Set>OnModActivated</Set>
@@ -373,7 +373,7 @@
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>
-    <Content Include="SQL\RiseMoon.sql">
+    <Content Include="SQL\WordOfMouth.sql">
       <SubType>Lua</SubType>
       <ImportIntoVFS>False</ImportIntoVFS>
     </Content>

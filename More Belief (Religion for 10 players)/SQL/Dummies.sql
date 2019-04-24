@@ -1,42 +1,25 @@
+
 --===========================================
--- Rise Moon Dummy
+-- Gemoust Dummy
 --===========================================
 
 --===========================================
--- +5% FAITH
--- +5% GREAT PEOPLE
--- -5% EMPIRE NEED MODIFIERS
+-- +2% GREAT Artist, Mucisian, writer
 --===========================================
 INSERT INTO BuildingClasses
 			(Type,									DefaultBuilding,				NoLimit)
-VALUES		('BUILDINGCLASS_DF_MOONSHINE_ARCANUM', 'BUILDING_DF_MOONSHINE_ARCANUM', 1);
+VALUES		('BUILDINGCLASS_DF_Gemoust', 'BUILDING_DF_Gemoust', 1);
 
 INSERT INTO Buildings
-			(Type,								BuildingClass,							Description,				 GoldMaintenance,		Cost,	FaithCost,	GreatWorkCount, NeverCapture,	NukeImmune, ConquestProb,	HurryCostModifier,	IconAtlas,			PortraitIndex, IsDummy, GlobalGreatPeopleRateModifier, EmpireNeedsModifierGlobal)
-VALUES		('BUILDING_DF_MOONSHINE_ARCANUM',	'BUILDINGCLASS_DF_MOONSHINE_ARCANUM',	'Dummy Moonshine''s Arcanum',	 0,					-1,		-1,			-1,				1,				1,			0,				-1,					'CIV_COLOR_ATLAS',	0,				1,		'5',							'-5');
-
-INSERT INTO Building_GlobalYieldModifiers ("BuildingType", "YieldType", "Yield") 
-VALUES ('BUILDING_DF_MOONSHINE_ARCANUM', 'YIELD_FAITH', '5');
-
---===========================================
--- -15% EMPIRE NEED MODIFIERS
--- +15% FAITH
---===========================================
-INSERT INTO BuildingClasses
-			(Type,									DefaultBuilding,				NoLimit)
-VALUES		('BUILDINGCLASS_DF_MOONSHINE_ARCANUM_BONUS', 'BUILDING_DF_MOONSHINE_ARCANUM', 1);
-
-INSERT INTO Buildings																																			--15% maintenance
-			(Type,								BuildingClass,									Description,				  "GlobalGreatPeopleRateModifier", "EmpireNeedsModifierGlobal",GoldMaintenance,		Cost,	FaithCost,	GreatWorkCount, NeverCapture,	NukeImmune, ConquestProb,	HurryCostModifier,	IconAtlas,			PortraitIndex, IsDummy, GlobalGreatPeopleRateModifier, EmpireNeedsModifierGlobal)
-VALUES		('BUILDING_DF_MOONSHINE_ARCANUM_BONUS','BUILDINGCLASS_DF_MOONSHINE_ARCANUM_BONUS',	'Dummy Moonshine''s Arcanum','0',							   					'-15',		 0,					-1,		-1,			-1,				1,				1,			0,				-1,					'CIV_COLOR_ATLAS',	0,				1,		'5',							'-15');
-
--- +15% faith  
-INSERT INTO "Building_YieldModifiers" ("BuildingType", "YieldType", "Yield") 
-VALUES ('BUILDING_DF_MOONSHINE_ARCANUM_BONUS', 'YIELD_FAITH', '15');
+			(Type,								BuildingClass,							Description,				 GoldMaintenance,		Cost,	FaithCost,	GreatWorkCount, NeverCapture,	NukeImmune, ConquestProb,	HurryCostModifier,	IconAtlas,			PortraitIndex, IsDummy)
+VALUES		('BUILDING_DF_Gemoust',	'BUILDINGCLASS_DF_Gemoust',	'Dummy Gemoust',	 0,					-1,		-1,			-1,				1,				1,			0,				-1,					'CIV_COLOR_ATLAS',	0,				1);
 
 ---------------------------------
 -- Building modifier
--- +15% great writers
 ---------------------------------
+-- +2% great artist,writer and musician
 INSERT INTO Building_SpecificGreatPersonRateModifier ("BuildingType", "SpecialistType", "Modifier") 
-VALUES ('BUILDING_DF_MOONSHINE_ARCANUM_BONUS', 'SPECIALIST_WRITER', '15');
+VALUES	('BUILDING_DF_Gemoust', 'SPECIALIST_WRITER', '2'),
+		('BUILDING_DF_Gemoust', 'SPECIALIST_MUSICIAN', '2'),
+		('BUILDING_DF_Gemoust', 'SPECIALIST_ARTIST', '2');
+
